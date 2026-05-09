@@ -17,7 +17,7 @@ export default async function CoursePage({
     return <div>Course not found</div>
   }
 
-  const completedModules = 1
+  
 
   return (
     <main className="min-h-screen bg-gray-100 p-6">
@@ -41,7 +41,7 @@ export default async function CoursePage({
 
             {course.modules.map((module, index) => {
 
-              const isLocked = index > completedModules
+              const isLocked = false
 
               return (
 
@@ -60,7 +60,7 @@ export default async function CoursePage({
                     </h2>
 
                     <p className="text-gray-600">
-                      {module}
+                      {module.title}
                     </p>
                   </div>
 
@@ -76,7 +76,7 @@ export default async function CoursePage({
                   ) : (
 
                     <Link
-                      href="/lesson/1"
+                      href={`/lesson/${module.id}`}
                       className="bg-black text-white px-4 py-2 rounded-xl"
                     >
                       Start Module
