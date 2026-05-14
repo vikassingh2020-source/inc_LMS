@@ -65,20 +65,20 @@ export default function LessonPage() {
         setCurrentInteraction(interaction)
       }
 
-      const allInteractionsCompleted =
-        completedInteractions.length ===
-        lesson.interactions.length
+      const allCompleted =
+  completedInteractions.length ===
+  lesson.interactions.length
 
-      if (
-        allInteractionsCompleted &&
-        !showFinalQuiz &&
-        !moduleCompleted
-      ) {
+if (
+  allCompleted &&
+  !showFinalQuiz &&
+  !moduleCompleted &&
+  currentTime >= lesson.finalQuiz.time
+) {
+  setShowFinalQuiz(true)
 
-        setShowFinalQuiz(true)
-
-        playerRef.current.pauseVideo()
-      }
+  playerRef.current.pauseVideo()
+}
 
     }, 1000)
 

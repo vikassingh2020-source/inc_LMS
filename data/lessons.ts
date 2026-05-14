@@ -6,55 +6,76 @@ export const lessons = [
 
     title: "Understanding Change",
 
-    videoId: "or3fIUwDlpM",
+    videoId: "SWDID3p3QKw",
 
     interactions: [
 
       {
         id: 1,
 
-        time: 10,
+        time: 135,
 
-        question: "What is the best response to change?",
+        question: "How many Squares did you see?",
 
         options: [
-          "Avoid it",
-          "Adapt and learn",
-          "Ignore reality",
+          "4",
+          "3",
+          "6",
         ],
 
-        correctAnswer: 1,
+        correctAnswer: 3,
       },
 
       {
         id: 2,
-        courseId: 2,
+        courseId: 1,
 
-        time: 25,
+        time: 165,
 
-        question: "Why is adaptability important?",
+        question: "How many many times did you tap?",
 
         options: [
-          "Growth",
-          "Fear",
-          "Confusion",
+          "6",
+          "4",
+          "8",
         ],
 
-        correctAnswer: 0,
+        correctAnswer: 6,
       },
+
+      {
+        id: 3,
+        courseId: 1,
+
+        time: 429,
+
+        question: "How many many times did shapes appear twice?",
+
+        options: [
+          "3",
+          "4",
+          "6",
+        ],
+
+        correctAnswer: 6,
+    },
+
     ],
+
 
     finalQuiz: {
 
-      question: "What mindset helps in uncertain situations?",
+        time: 658,
+
+      question: "Adaptability = ______:",
 
       options: [
-        "Resistance",
-        "Adaptability",
-        "Avoidance",
+        "Think",
+        "Reset and Move",
+        "Wait for the right time",
       ],
 
-      correctAnswer: 1,
+      correctAnswer: 2,
     },
   },
 ]
