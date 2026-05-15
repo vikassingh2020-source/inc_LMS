@@ -8,17 +8,17 @@ export const courses = [
     modules: [
       {
         id: 1,
-        title: "Understanding Change",
+        title: "Training your Brain to Handle sudden Change",
       },
 
       {
         id: 2,
-        title: "Flexible Thinking",
+        title: "You cant Adapt if your Emotions Hijack your Brain",
       },
 
       {
         id: 3,
-        title: "Learning New Skills",
+        title: "Flexible Thinking",
       },
     ],
   },
@@ -31,17 +31,17 @@ export const courses = [
     modules: [
       {
         id: 4,
-        title: "Patterns and Connections",
+        title: "Everything is Connected",
       },
 
       {
         id: 5,
-        title: "Cause and Effect",
+        title: "Why Problems Repeat",
       },
 
       {
         id: 6,
-        title: "Complex Systems",
+        title: "Fix the System not the Symptom",
       },
     ],
   },

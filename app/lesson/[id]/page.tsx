@@ -1,197 +1,257 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-
+import { use, useEffect, useRef, useState } from "react"
 import YouTube from "react-youtube"
-
 import { lessons } from "@/data/lessons"
-
-import { auth } from "@/lib/firebase"
+import { auth, db } from "@/lib/firebase"
 
 import {
-  collection,
-setDoc,
-  doc
+  doc,
+  setDoc,
 } from "firebase/firestore"
 
-import { db } from "@/lib/firebase"
+export default function LessonPage({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
 
-export default function LessonPage() {
+  const resolvedParams = use(params)
 
-  const lesson = lessons[0]
+  const lesson = lessons.find(
+    (item) =>
+      item.id === Number(resolvedParams.id)
+  )
+
+  if (!lesson) {
+    return (
+      <main className="min-h-screen flex items-center justify-center bg-black text-white">
+        <h1 className="text-3xl font-bold">
+          Lesson Not Found
+        </h1>
+      </main>
+    )
+  }
 
   const playerRef = useRef<any>(null)
 
-  const [currentInteraction, setCurrentInteraction] = useState<any>(null)
+  const interactionTriggered =
+    useRef<number[]>([])
 
-  const [completedInteractions, setCompletedInteractions] = useState<number[]>([])
+  const [currentInteraction,
+    setCurrentInteraction] =
+    useState<any>(null)
 
-  const [showFinalQuiz, setShowFinalQuiz] = useState(false)
+  const [completedInteractions,
+    setCompletedInteractions] =
+    useState<number[]>([])
 
-  const [moduleCompleted, setModuleCompleted] = useState(false)
-  
-  const [score, setScore] = useState(0)
+  const [earnedPoints,
+    setEarnedPoints] =
+    useState<number[]>([])
 
-  const interactionTriggered = useRef<number[]>([])
+  const [showFinalQuiz,
+    setShowFinalQuiz] =
+    useState(false)
+const [currentFinalQuestionIndex,
+  setCurrentFinalQuestionIndex] =
+  useState(0)
+
+const [finalQuizPoints,
+  setFinalQuizPoints] =
+  useState<number[]>([])
+
+
+  const [moduleCompleted,
+    setModuleCompleted] =
+    useState(false)
 
   const onReady = (event: any) => {
-
     playerRef.current = event.target
-
   }
 
   useEffect(() => {
 
-    const interval = setInterval(() => {
+    const interval =
+      setInterval(() => {
 
-      if (!playerRef.current) return
+        if (!playerRef.current)
+          return
 
-      const currentTime = Math.floor(
-        playerRef.current.getCurrentTime()
-      )
+        const currentTime =
+          Math.floor(
+            playerRef.current.getCurrentTime()
+          )
 
-      const interaction = lesson.interactions.find(
-        (item) =>
-          item.time === currentTime &&
-          !interactionTriggered.current.includes(item.id)
-      )
+        const interaction =
+          lesson.interactions.find(
+            (item) =>
+              item.time === currentTime &&
+              !interactionTriggered.current.includes(
+                item.id
+              )
+          )
 
-      if (interaction) {
+        if (interaction) {
 
-        interactionTriggered.current.push(interaction.id)
+          interactionTriggered.current.push(
+            interaction.id
+          )
 
-        playerRef.current.pauseVideo()
+          playerRef.current.pauseVideo()
 
-        setCurrentInteraction(interaction)
-      }
+          setCurrentInteraction(
+            interaction
+          )
+        }
 
-      const allCompleted =
-  completedInteractions.length ===
-  lesson.interactions.length
+        const allInteractionsCompleted =
+          completedInteractions.length ===
+          lesson.interactions.length
 
-if (
-  allCompleted &&
-  !showFinalQuiz &&
-  !moduleCompleted &&
-  currentTime >= lesson.finalQuiz.time
-) {
-  setShowFinalQuiz(true)
+        if (
+          allInteractionsCompleted &&
+          !showFinalQuiz &&
+          !moduleCompleted &&
+          currentTime >= lesson.finalQuizQuestions.time
+        ) {
 
-  playerRef.current.pauseVideo()
-}
+          setShowFinalQuiz(true)
 
-    }, 1000)
+          playerRef.current.pauseVideo()
+        }
 
-    return () => clearInterval(interval)
+      }, 1000)
 
-  }, [completedInteractions, lesson, moduleCompleted, showFinalQuiz])
+    return () =>
+      clearInterval(interval)
 
-  const handleInteractionAnswer = (
-  selectedIndex: number
-) => {
-
-  if (!currentInteraction) return
-
-  if (
-    selectedIndex ===
-    currentInteraction.correctAnswer
-  ) {
-
-    setScore((prev) => prev + 10)
-  }
-
-  setCompletedInteractions((prev) => [
-    ...prev,
-    currentInteraction.id,
+  }, [
+    completedInteractions,
+    lesson,
+    moduleCompleted,
+    showFinalQuiz,
   ])
 
-  setCurrentInteraction(null)
+  const handleInteractionAnswer =
+    (selectedIndex: number) => {
 
-  playerRef.current.playVideo()
-}
+      if (!currentInteraction)
+        return
 
-  const handleFinalQuiz = async (
-  selectedIndex: number
-) => {
+      if (
+        selectedIndex ===
+        currentInteraction.correctAnswer
+      ) {
 
-  let finalScore = score
+        setEarnedPoints((prev) => [
+          ...prev,
+          10,
+        ])
+      }
 
-  if (
-    selectedIndex ===
-    lesson.finalQuiz.correctAnswer
-  ) {
+      setCompletedInteractions(
+        (prev) => [
+          ...prev,
+          currentInteraction.id,
+        ]
+      )
 
-    finalScore += 20
-  }
+      setCurrentInteraction(null)
 
-  try {
+      playerRef.current.playVideo()
+    }
 
-    const currentUser =
-      auth.currentUser
+    const handleFinalQuiz =
+  async (selectedIndex: number) => {
 
-    if (!currentUser) {
+    const currentQuestion =
+      lesson.finalQuizQuestions.questions[
+        currentFinalQuestionIndex
+      ]
 
-      alert("User not logged in")
+    let updatedFinalPoints =
+      [...finalQuizPoints]
+
+    if (
+      selectedIndex ===
+      currentQuestion.correctAnswer
+    ) {
+      updatedFinalPoints.push(10)
+    }
+
+    setFinalQuizPoints(updatedFinalPoints)
+
+    const isLastQuestion =
+      currentFinalQuestionIndex ===
+      lesson.finalQuizQuestions.questions.length - 1
+
+    if (!isLastQuestion) {
+
+      setCurrentFinalQuestionIndex(
+        prev => prev + 1
+      )
 
       return
     }
 
-    const progressRef = doc(
-  db,
-  "studentProgress",
-  `${currentUser.uid}_module_${lesson.id}`
-)
+    let interactionScore =
+      earnedPoints.reduce(
+        (sum, points) =>
+          sum + points,
+        0
+      )
 
-await setDoc(progressRef, {
+    let finalQuizScore =
+      updatedFinalPoints.reduce(
+        (sum, points) =>
+          sum + points,
+        0
+      )
 
-  userId:
-    currentUser.uid,
+    let totalScore =
+      interactionScore + finalQuizScore
 
-  userName:
-    currentUser.displayName,
+    try {
 
-  userEmail:
-    currentUser.email,
+      const currentUser =
+        auth.currentUser
 
-  moduleId:
-    lesson.id,
+      if (!currentUser) {
+        alert("User not logged in")
+        return
+      }
 
-  courseId:
-    lesson.courseId,
+      const progressRef = doc(
+        db,
+        "studentProgress",
+        `${currentUser.uid}_module_${lesson.id}`
+      )
 
-  moduleTitle:
-    lesson.title,
+      await setDoc(progressRef, {
+        userId: currentUser.uid,
+        userName: currentUser.displayName,
+        userEmail: currentUser.email,
+        moduleId: lesson.id,
+        courseId: lesson.courseId,
+        moduleTitle: lesson.title,
+        score: totalScore,
+        completed: true,
+        completedAt: new Date(),
+      })
 
-  score:
-    finalScore,
+    } catch (error) {
+      console.error(error)
+      return
+    }
 
-  completed:
-    true,
+    setShowFinalQuiz(false)
 
-  completedAt:
-    new Date(),
-})
+    setModuleCompleted(true)
 
-
-    console.log(
-      "Progress Saved Successfully"
+    alert(
+      `Module Completed! Score: ${totalScore}`
     )
-
-  } catch (error) {
-
-    console.error(
-      "Firebase Save Error:",
-      error
-    )
-  }
-
-  setShowFinalQuiz(false)
-
-  setModuleCompleted(true)
-
-  alert(
-    `Module Completed! Score: ${finalScore}`
-  )
 }
 
   return (
@@ -219,21 +279,22 @@ await setDoc(progressRef, {
             <div className="bg-white p-8 rounded-2xl w-full max-w-md">
 
               <h2 className="text-2xl font-bold mb-6 text-center">
-
                 {currentInteraction.question}
-
               </h2>
 
               <div className="space-y-4">
 
                 {currentInteraction.options.map(
-                  (option: string, index: number) => (
+                  (
+                    option: string,
+                    index: number
+                  ) => (
 
                     <button
                       key={index}
                       onClick={() =>
-  handleInteractionAnswer(index)
-}
+                        handleInteractionAnswer(index)
+                      }
                       className="w-full bg-black text-white py-3 rounded-xl"
                     >
                       {option}
@@ -257,21 +318,26 @@ await setDoc(progressRef, {
             <div className="bg-white p-8 rounded-2xl w-full max-w-md">
 
               <h2 className="text-2xl font-bold mb-6 text-center">
-
-                {lesson.finalQuiz.question}
-
+                {lesson.finalQuizQuestions.questions[
+  currentFinalQuestionIndex
+].question}
               </h2>
 
               <div className="space-y-4">
 
-                {lesson.finalQuiz.options.map(
-                  (option: string, index: number) => (
+                {lesson.finalQuizQuestions.questions[
+  currentFinalQuestionIndex
+].options.map(
+                  (
+                    option: string,
+                    index: number
+                  ) => (
 
                     <button
                       key={index}
                       onClick={() =>
-  handleFinalQuiz(index)
-}
+                        handleFinalQuiz(index)
+                      }
                       className="w-full bg-black text-white py-3 rounded-xl"
                     >
                       {option}
@@ -291,9 +357,7 @@ await setDoc(progressRef, {
         {moduleCompleted && (
 
           <div className="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-xl">
-
             Module Completed
-
           </div>
 
         )}
