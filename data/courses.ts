@@ -49,22 +49,22 @@ export const courses = [
   {
     id: 3,
 
-    title: "High-level Digital Intelligence",
+    title: "Digital Intelligence",
 
     modules: [
       {
         id: 7,
-        title: "Digital Awareness",
+        title: "Who is Controlling your Attention?",
       },
 
       {
         id: 8,
-        title: "Using AI Responsibly",
+        title: "Can you Trust what you See?",
       },
 
       {
         id: 9,
-        title: "Digital Productivity",
+        title: "Use Tech, Don't Let Tech Use You",
       },
     ],
   },
@@ -73,23 +73,23 @@ export const courses = [
     id: 4,
 
     title:
-      "Information Filtering (Cognitive Hygiene)",
+      "Brain Filter Lab",
 
     modules: [
       {
         id: 10,
-        title: "Fake vs Real Information",
+        title: "What are you Feeding your Brain?",
       },
 
       {
         id: 11,
-        title: "Bias Detection",
+        title: "Why your Brain gets Tricked?",
       },
 
       {
         id: 12,
         title:
-          "Healthy Media Consumption",
+          "Build your Brain Filter",
       },
     ],
   },

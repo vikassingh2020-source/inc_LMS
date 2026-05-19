@@ -394,4 +394,462 @@ export const lessons = [
     },
   },
 
+  {
+    id: 7,
+
+    courseId: 3,
+
+    title: "Who is Controlling your Attention?",
+
+    videoId: "DTFyi6LUkjY",
+
+    interactions: [
+      {
+        id: 1,
+        time: 174,
+        question: "Why did your brain react quickly to phone sounds and notifications?",
+        options: ["By accident", "Apps are designed to grab attention", "Phones are magical"],
+        correctAnswer: 1,
+      },
+
+      {
+        id: 2,
+        time: 250,
+        question: "Why does time disappear while scrolling?",
+        options: ["The clock stops", "Interesting Videos", "There is no clear stopping point"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 3,
+        time: 313,
+        question: "What made the focus challenge difficult?",
+        options: ["Easy counting", "Less Time", "Attention distractions like messages and alerts"],
+
+        correctAnswer: 2,
+      },
+    ],
+
+    finalQuizQuestions: {
+      time: 480,
+
+      questions: [
+        {
+          question: "Smart users do what?",
+          options: [
+            "Use every app all day",
+            "Design boundaries",
+            "Ignore everything",
+          
+          ],
+          correctAnswer: 1,
+        },
+          {
+          question: "If you lose focus many times, what happens?",
+          options: [
+            "Attention breaks become costly",
+            "Time increases",
+            "Memory becomes perfect",
+          
+          ],
+          correctAnswer: 0,
+        },
+        
+      ],
+    },
+  },
+
+  {
+    id: 8,
+
+    courseId: 3,
+
+    title: "Can you Trust what you See?",
+
+    videoId: "ckLxZQstdTE",
+
+    interactions: [
+      {
+        id: 1,
+        time: 77,
+        question: "If something looks real, it is always real",
+        options: ["Yes", "Not Always", "Maybe"],
+        correctAnswer: 1 & 2,
+      },
+
+      {
+        id: 2,
+        time: 198,
+        question: "Why were the funny headlines shown in the activity?",
+        options: ["To make students laugh", "To trigger clicks and curiosity", "To advertise food"],
+        correctAnswer: 1,
+      },
+
+      {
+        id: 3,
+        time: 199,
+        question: "100% guaranteed success” is an example of",
+        options: ["A clickbait headline", "A trustworthy fact", "A science experiment"],
+
+        correctAnswer: 0,
+      },
+
+      {
+        id: 4,
+        time: 294,
+        question: "Views mainly measure:",
+        options: ["Truth", "Attention", "Intelligence"],
+
+        correctAnswer: 1,
+      },
+   
+       {
+        id: 5,
+        time: 389,
+        question: "If you get a message saying “School holiday tomorrow! Share fast!”, what should you do first?",
+        options: ["Forward to everyone", "Celebrate", "Check the source"],
+
+        correctAnswer: 2,
+      },
+
+    ],
+
+    finalQuizQuestions: {
+      time: 568,
+
+      questions: [
+        {
+          question: "The smart digital rule is:",
+          options: [
+            "Share first",
+            "Believe fast",
+            "Pause. Check. Then trust",
+          
+          ],
+          correctAnswer: 2,
+        },
+          {
+          question: "Fast emotions can lead to:",
+          options: [
+            "Smart checking",
+            "Bad decisions",
+            "Better marks",
+          
+          ],
+          correctAnswer: 1,
+        },
+        
+      ],
+    },
+  },
+
+  {
+    id: 9,
+
+    courseId: 3,
+
+    title: "Use Tech, Don't Let Tech Use You",
+
+    videoId: "g82WJ9scQJw",
+
+    interactions: [
+      {
+        id: 1,
+        time: 109,
+        question: "Who should decide when you stop using an app?",
+        options: ["The app", "Autoplay", "You"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 2,
+        time: 197,
+        question: "Technology can:",
+        options: ["Only help", "Help and also control", "Only distract"],
+        correctAnswer: 1,
+      },
+
+      {
+        id: 3,
+        time: 316,
+        question: "AI doing your full homework is an example of",
+        options: ["Smart learning", "Strong thinking", "Overdependence"],
+
+        correctAnswer: 2,
+      },
+
+      {
+        id: 4,
+        time: 443,
+        question: "“Screenshots are faster than regret” means:",
+        options: ["Once you post something, others can save it quickly", "Screenshots are useful", "Phones are fast"],
+
+        correctAnswer: 0,
+      },
+   
+       {
+        id: 5,
+        time: 594,
+        question: "The smart digital rule is:",
+        options: ["Let AI decide", "React fast", "Think. Pause. Choose"],
+
+        correctAnswer: 2,
+      },
+
+    ],
+
+    finalQuizQuestions: {
+      time: 658,
+
+      questions: [
+        {
+          question: "“Tools help thinking. Dependence replaces thinking.” means:",
+          options: [
+            "Never use technology",
+            "Use tech wisely, don’t let it think for you",
+            "AI should do all work",
+          
+          ],
+          correctAnswer: 1,
+        },
+          {
+          question: "Which is a healthy use of AI?",
+          options: [
+            "AI gives ideas for your project",
+            "AI writes everything while you do nothing",
+            "AI takes every decision",
+          
+          ],
+          correctAnswer: 0,
+        },
+        
+      ],
+    },
+  },
+ 
+ {
+    id: 10,
+
+    courseId: 4,
+
+    title: "What are you Feeding your Brain?",
+
+    videoId: "nRFRwNmhnq8",
+
+    interactions: [
+      {
+        id: 1,
+        time: 76,
+        question: "So why should you be careful about random information?",
+        options: ["Because information affects your brain", "Because teachers said so", "Because phones are expensive"],
+        correctAnswer: 0,
+      },
+
+      {
+        id: 2,
+        time: 292,
+        question: "A learning video is more like:",
+        options: ["Noise", "Brain junk", "Brain snack"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 3,
+        time: 374,
+        question: "Why was it hard to remember the numbers after many distractions?",
+        options: ["Numbers changed", "Too much input interrupted focus", "The game was unfair"],
+
+        correctAnswer: 1,
+      },
+
+      {
+        id: 4,
+        time: 457,
+        question: "Emotional content sticks because:",
+        options: ["It grabs attention strongly", "It charges your brain", "It makes memory perfect"],
+
+        correctAnswer: 0,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 570,
+
+      questions: [
+        {
+          question: "“Brain junk” means:",
+          options: [
+            "Helpful information",
+            "School books",
+            "Useless or harmful content",
+          
+          ],
+          correctAnswer: 2,
+        },
+          {
+          question: "Smart brains do what?",
+          options: [
+            "Watch everything",
+            "Filter information",
+            "Trust everything",
+          
+          ],
+          correctAnswer: 1,
+        },
+        
+      ],
+    },
+  },
+  
+  {
+    id: 11,
+
+    courseId: 4,
+
+    title: "Why your Brain gets Tricked?",
+
+    videoId: "tDLlaxQ-6Bc",
+
+    interactions: [
+      {
+        id: 1,
+        time: 87,
+        question: "Can smart people believe silly things sometimes?",
+        options: ["Yes", "No", ],
+        correctAnswer: 0,
+      },
+
+      {
+        id: 2,
+        time: 150,
+        question: "Why did “Blue bananas improve memory” start feeling believable?",
+        options: ["Because it was scientifically true", "Because bananas are healthy", "Because hearing something many times makes it feel familiar"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 3,
+        time: 198,
+        question: "If you see “URGENT! Dangerous animal near your school!”, what is the smartest first step?",
+        options: ["Run immediately", "Check if it is true", "Panic dramatically"],
+
+        correctAnswer: 1,
+      },
+
+      {
+        id: 4,
+        time: 286,
+        question: "Your brain likes information that:",
+        options: ["Is always true", "Is difficult to understand", "Matches what you already believe"],
+
+        correctAnswer: 2,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 420,
+
+      questions: [
+        {
+          question: "Strong emotions usually make careful thinking:",
+          options: [
+            "Better",
+            "Weaker",
+            "Stronger",
+          
+          ],
+          correctAnswer: 1,
+        },
+          {
+          question: "Smart brains do what before reacting?",
+          options: [
+            "Shout",
+            "Ignore",
+            "Pause",
+          
+          ],
+          correctAnswer: 2,
+        },
+        
+      ],
+    },
+  },
+  
+{
+    id: 12,
+
+    courseId: 4,
+
+    title: "Build your Brain Filter",
+
+    videoId: "7CclM5u28pA",
+
+    interactions: [
+      {
+        id: 1,
+        time: 99,
+        question: "So why should you not leave your brain “door” open?",
+        options: ["Because phones are dangerous", "Because not everything should enter your brain", "Because teachers say so",],
+        correctAnswer: 1,
+      },
+
+      {
+        id: 2,
+        time: 166,
+        question: "If a message says “Forward immediately!!!”, what should you do?",
+        options: ["Pause and check first", "Panic", "Forward fast"],
+        correctAnswer: 0,
+      },
+
+      {
+        id: 3,
+        time: 167,
+        question: "“Interesting science fact” should be:",
+        options: ["Shared without reading", "Believed instantly", "Checked if needed"],
+
+        correctAnswer: 2,
+      },
+
+      {
+        id: 4,
+        time: 455,
+        question: "If something makes you angry, scared, or too excited, you should:",
+        options: ["React immediately", "Pause and Take Breath first", "Ignore school work"],
+
+        correctAnswer: 1,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 555,
+
+      questions: [
+        {
+          question: "Brain filter habits are:",
+          options: [
+            "React, Share, Repeat",
+            "Believe, Forward, Panic",
+            "Pause, Question, Choose",
+          
+          ],
+          correctAnswer: 2,
+        },
+          {
+          question: "Questions are called:",
+          options: [
+            "Brain shields",
+            "Slow learning",
+            "Time waste",
+          
+          ],
+          correctAnswer: 0,
+        },
+        
+      ],
+    },
+  },
+
 ]
