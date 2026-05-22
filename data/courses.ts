@@ -3,7 +3,7 @@ export const courses = [
   {
     id: 1,
 
-    title: "Adaptability",
+    title: "Adaptability Lab",
 
     modules: [
       {
@@ -26,7 +26,7 @@ export const courses = [
   {
     id: 2,
 
-    title: "System Thinking",
+    title: "System Thinking Lab",
 
     modules: [
       {
@@ -49,7 +49,7 @@ export const courses = [
   {
     id: 3,
 
-    title: "Digital Intelligence",
+    title: "Digital Intelligence Lab",
 
     modules: [
       {
@@ -98,7 +98,7 @@ export const courses = [
     id: 5,
 
     title:
-      "Communication with Clarity",
+      "Clear Talk Lab",
 
     modules: [
       {
@@ -123,7 +123,7 @@ export const courses = [
     id: 6,
 
     title:
-      "Creative Problem Solving",
+      "Solve It Lab",
 
     modules: [
       {

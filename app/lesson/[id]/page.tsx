@@ -113,7 +113,8 @@ const [finalQuizPoints,
           allInteractionsCompleted &&
           !showFinalQuiz &&
           !moduleCompleted &&
-          currentTime >= lesson.finalQuizQuestions.time
+          lesson.finalQuizQuestions &&
+currentTime >= lesson.finalQuizQuestions.time
         ) {
 
           setShowFinalQuiz(true)

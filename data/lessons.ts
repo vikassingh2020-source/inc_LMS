@@ -852,4 +852,463 @@ export const lessons = [
     },
   },
 
+  {
+    id: 13,
+
+    courseId: 5,
+
+    title: "Say What You Actually Mean",
+
+    videoId: "KPsBOaMEspI",
+
+    interactions: [
+      {
+        id: 1,
+        time: 121,
+        question: "“Bring that thing” is confusing because:",
+        options: ["It is too long", "t is not clear what “thing” means", "It sounds funny",],
+        correctAnswer: 1,
+      },
+
+      {
+        id: 2,
+        time: 174,
+        question: "If I say “Draw a shape,” how many correct answers can there be?",
+        options: ["Many different answers", "Only one", "Two only"],
+        correctAnswer: 0,
+      },
+
+      {
+        id: 3,
+        time: 268,
+        question: "“Come here quickly” can confuse people because they may ask:",
+        options: ["Where?", "Why", "When", "All of the above"],
+
+        correctAnswer: 4,
+      },
+
+      {
+        id: 4,
+        time: 410,
+        question: "“Meet me later” is a bad message because it does NOT tell:",
+        options: ["Where to meet", "When to meet", "All of the above"],
+
+        correctAnswer: 2,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 525,
+
+      questions: [
+        {
+          question: "Clear instructions create:",
+          options: [
+            "Confusion",
+            "Clear results",
+            "More questions always",
+          
+          ],
+          correctAnswer: 1,
+        },
+          {
+          question: "Which belongs in the Clear Talk Checklist?",
+          options: [
+            "Who?",
+            "What?",
+            "When?",
+            "Where?",
+            "All of the above", 
+          
+          ],
+          correctAnswer: 4,
+        },
+        
+      ],
+    },
+  },
+
+   {
+    id: 14,
+
+    courseId: 5,
+
+    title: "Listen To Understand",
+
+    videoId: "7t0xQ1ccdYg",
+
+    interactions: [
+      {
+        id: 1,
+        time: 137,
+        question: "If someone says “Fine,” it can mean:",
+        options: ["Happy", "Angry", "Sarcastic", "All of the above"],
+        correctAnswer: 3,
+      },
+
+      {
+        id: 2,
+        time: 232,
+        question: "Missing details can create:",
+        options: ["Less confusion", "Better understanding", "Wrong stories"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 3,
+        time: 300,
+        question: "“Why do text messages often create confusion?",
+        options: ["They are colorful?", "They lose tone", "They are short"],
+
+        correctAnswer: 1,
+      },
+
+      {
+        id: 4,
+        time: 495,
+        question: "What is the smart thing to do when meaning is unclear?",
+        options: ["Guess fast", "Ignore it", "Ask for clarification"],
+
+        correctAnswer: 2,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 519,
+
+      questions: [
+        {
+          question: "Listening carefully helps us:",
+          options: [
+            "Understand better",
+            "Guess faster",
+            "Ignore others",
+          
+          ],
+          correctAnswer: 0,
+        },
+          {
+          question: "Which can create misunderstanding most easily?",
+          options: [
+            "Missing details?",
+            "Text messages without tone?",
+            "Fast guessing?",
+            "All of the above", 
+          
+          ],
+          correctAnswer: 3,
+        },
+        
+      ],
+    },
+  },
+
+   {
+    id: 15,
+
+    courseId: 5,
+
+    title: "Think, Then Speak",
+
+    videoId: "1X4SujXZ3xU",
+
+    interactions: [
+      {
+        id: 1,
+        time: 167,
+        question: "Fast reactions often make communication:",
+        options: ["Better", "Funny", "Worse"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 2,
+        time: 266,
+        question: "Why does communication change with different people?",
+        options: ["Audience matters", "Words change magically", "Teachers control it"],
+        correctAnswer: 0,
+      },
+
+      {
+        id: 3,
+        time: 391,
+        question: "Better words usually create:",
+        options: ["Silence", "More confusion", "Better outcomes"],
+
+        correctAnswer: 2,
+      },
+
+      {
+        id: 4,
+        time: 451,
+        question: "Good communication depends on:",
+        options: ["How loud you speak", "What you say AND when you say it", "Only what you say"],
+
+        correctAnswer: 1,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 576,
+
+      questions: [
+        {
+          question: "This module is mainly about:",
+          options: [
+            "Talking faster",
+            "Winning arguments",
+            "Responding smartly before reacting",
+          
+          ],
+          correctAnswer: 2,
+        },
+          {
+          question: "The smart communication rule is:",
+          options: [
+            "Speak first, think later",
+            "Pause. Think. Then speak",
+            "React fast", 
+          ],
+          correctAnswer: 2,
+        },
+        
+      ],
+    },
+  },
+
+   {
+    id: 16,
+
+    courseId: 6,
+
+    title: "One Problem, Many Solutions",
+
+    videoId: "Dm2Sx4AZZK8",
+
+    interactions: [
+      {
+        id: 1,
+        time: 82,
+        question: "If one plan fails, what should you think?",
+        options: ["Game over", "Give up", "Another plan may work"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 2,
+        time: 169,
+        question: "In the egg challenge, the main lesson was:",
+        options: ["One problem can have many solutions", "Eggs are fragile", "Boxes are useful"],
+        correctAnswer: 0,
+      },
+
+      {
+        id: 3,
+        time: 381,
+        question: "If a door is locked and you must give your friend a message, what should you do?",
+        options: ["Give up", "Break the door", "Find another way"],
+
+        correctAnswer: 2,
+      },
+
+      {
+        id: 4,
+        time: 551,
+        question: "When you feel stuck, what should you ask?",
+        options: ["Why me?", "What else could work?", "Can I quit?"],
+
+        correctAnswer: 1,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 580,
+
+      questions: [
+        {
+          question: "Creative problem-solving means:",
+          options: [
+            "Trying different ideas",
+            "Complaining",
+            "Waiting for help only",
+          
+          ],
+          correctAnswer: 2,
+        },
+          {
+          question: "What makes a strong problem solver?",
+          options: [
+            "Trying only one idea",
+            "Flexible thinking",
+            "Fast quitting", 
+          ],
+          correctAnswer: 1,
+        },
+        
+      ],
+    },
+  },
+
+{
+    id: 17,
+
+    courseId: 6,
+
+    title: "Break Big Problems",
+
+    videoId: "pTh-x2ipOJU",
+
+    interactions: [
+      {
+        id: 1,
+        time: 113,
+        question: "So big problems should be solved by:",
+        options: ["Asking others to do them", "One giant thought", "Breaking them into smaller steps"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 2,
+        time: 184,
+        question: "Before building a big LEGO model, what is smarter?",
+        options: ["Start randomly", "Sort the pieces first", "Build as fast as possible"],
+        correctAnswer: 1,
+      },
+
+      {
+        id: 3,
+        time: 279,
+        question: "Planning a school event feels easier when you break it into:",
+        options: ["Small tasks", "Give up", "Do it all at once"],
+
+        correctAnswer: 0,
+      },
+
+      {
+        id: 4,
+        time: 373,
+        question: "Some problems need:",
+        options: ["Random order", "No steps", "Right Order"],
+
+        correctAnswer: 2,
+      },
+
+      {
+        id: 5,
+        time: 509,
+        question: "If cleaning your room feels huge, what should you ask first?",
+        options: ["Can I skip it?", "What is the first small step?", "Who will clean it?"],
+
+        correctAnswer: 1,
+      },
+
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 560,
+
+      questions: [
+        {
+          question: "Big problems often feel scary because:",
+          options: [
+            "They are impossible",
+            "They always fail",
+            "They look too large at once",
+          
+          ],
+          correctAnswer: 2,
+        },
+          {
+          question: "Which comes first when making a sandwich?",
+          options: [
+            "Open packet",
+            "Buy Bread",
+            "Apply Fillings", 
+          ],
+          correctAnswer: 1,
+        },
+        
+      ],
+    },
+  },
+
+{
+    id: 18,
+
+    courseId: 6,
+
+    title: "Build Smarter Ideas",
+
+    videoId: "Zz6LEUG30rE",
+
+    interactions: [
+      {
+        id: 1,
+        time: 87,
+        question: "If your brain says “I have no ideas,” the module says:",
+        options: ["Wait for others", "Stop trying", "You may need better idea tools"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 2,
+        time: 220,
+        question: "What can limits sometimes create?",
+        options: ["New opportunities", "More problems", "Less creativity"],
+        correctAnswer: 0,
+      },
+
+      {
+        id: 3,
+        time: 279,
+        question: "IDEA BOOST helps when you feel:",
+        options: ["Sleepy", "Bored", "Stuck"],
+
+        correctAnswer: 2,
+      },
+
+      {
+        id: 4,
+        time: 543,
+        question: "Combining ideas means:",
+        options: ["Mixing two useful ideas together", "Making problems bigger", "Copying others"],
+
+        correctAnswer: 0,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 731,
+
+      questions: [
+        {
+          question: "If one method does not work, you should:",
+          options: [
+            "Wait forever",
+            "Try another tool or idea",
+            "Give up",
+          
+          ],
+          correctAnswer: 1,
+        },
+          {
+          question: "This module is mainly about:",
+          options: [
+            "Finishing work faster",
+            "Following rules only",
+            "Building smarter ideas when stuck", 
+          ],
+          correctAnswer: 2,
+        },
+        
+      ],
+    },
+  },
+
 ]
