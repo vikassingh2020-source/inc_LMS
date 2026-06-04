@@ -93,13 +93,13 @@ export default function Home() {
 
         <div className="flex flex-col justify-center px-10 lg:px-20">
 
-          <h1 className="text-5xllg:text-7xlfont-bold">
+          <h1 className="text-5xl lg:text-7xlfont-bold">
 
             MindOS
 
           </h1>
 
-          <p className="text-lglg:text-2xl">
+          <p className="text-lg lg:text-2xl">
 
             The Operating System for Future-Ready Minds
 
@@ -132,14 +132,7 @@ export default function Home() {
 
               <div
                 key={skill}
-                className="
-px-3 py-1.5
-lg:px-4 lg:py-2
-rounded-full
-bg-slate-800
-border border-slate-700
-text-xs lg:text-sm
-"
+                className="px-3 py-1.5lg:px-4 lg:py-2rounded-fullbg-slate-800border border-slate-700text-xs lg:text-sm"
               >
                 {skill}
               </div>
