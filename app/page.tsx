@@ -39,6 +39,59 @@ export default function Home() {
 
       <style jsx global>{`
 
+      @keyframes rotateRing {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes orbGlow {
+
+  0% {
+    box-shadow:
+      0 0 30px rgba(56,189,248,0.4);
+  }
+
+  50% {
+    box-shadow:
+      0 0 80px rgba(56,189,248,1);
+  }
+
+  100% {
+    box-shadow:
+      0 0 30px rgba(56,189,248,0.4);
+  }
+
+}
+
+.mindos-ring {
+
+  position: absolute;
+
+  inset: -12px;
+
+  border-radius: 9999px;
+
+  border: 2px solid rgba(56,189,248,0.25);
+
+  border-top-color: rgba(56,189,248,1);
+
+  animation:
+    rotateRing 12s linear infinite;
+}
+
+.mindos-core {
+
+  animation:
+    orbGlow 3s ease-in-out infinite;
+}
+
         @keyframes glowPulse {
 
           0% {
@@ -53,6 +106,33 @@ export default function Home() {
             stroke-opacity: 0.2;
           }
         }
+
+        @keyframes dataFlow {
+
+  0% {
+    stroke-dashoffset: 120;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+
+}
+
+.data-line {
+
+  stroke: #38bdf8;
+  stroke-width: 3;
+
+  stroke-dasharray: 12 12;
+
+  animation:
+    dataFlow 2.5s linear infinite;
+
+  filter: drop-shadow(
+    0 0 6px rgba(56,189,248,0.8)
+  );
+}
            
        @keyframes orbGlow {
 
@@ -163,7 +243,7 @@ export default function Home() {
             onClick={login}
             className="mt-10 bg-white text-black px-8 py-4 rounded-xl font-semibold w-fit hover:scale-105 transition"
           >
-            Login with Google
+            Continue with Google
           </button>
 
         </div>
@@ -180,7 +260,7 @@ export default function Home() {
           >
 
             <line
-              className="glow-line"
+              className="data-line"
               x1="350"
               y1="350"
               x2="350"
@@ -188,7 +268,7 @@ export default function Home() {
             />
 
             <line
-              className="glow-line"
+              className="data-line"
               x1="350"
               y1="350"
               x2="140"
@@ -199,7 +279,7 @@ export default function Home() {
             />
 
             <line
-              className="glow-line"
+              className="data-line"
               x1="350"
               y1="350"
               x2="560"
@@ -210,7 +290,7 @@ export default function Home() {
             />
 
             <line
-              className="glow-line"
+              className="data-line"
               x1="350"
               y1="350"
               x2="250"
@@ -221,7 +301,7 @@ export default function Home() {
             />
 
             <line
-              className="glow-line"
+              className="data-line"
               x1="350"
               y1="350"
               x2="450"
@@ -235,21 +315,24 @@ export default function Home() {
 
           {/* CENTER */}
 
-          <div className="absolute flex flex-col items-center">
+         <div className="absolute flex flex-col items-center">
 
-            <div className="w-40 h-40 rounded-full bg-white text-black flex items-center justify-center text-4xl font-bold animate-orbGlow">
+  <div className="relative w-40 h-40">
 
-              MindOS
+    <div className="mindos-ring" />
 
-            </div>
+    <div
+      className="absolute inset-0 rounded-full bg-white text-black flex items-center justify-center text-4xl font-bold mindos-core">
+      MindOS
+    </div>
 
-            <div className="mt-5 text-slate-400 text-center max-w-xs">
+  </div>
 
-              Upgrade How Students Think
+  <div className="mt-5 text-slate-400 text-center max-w-xs">
+    Upgrade How Students Think
+  </div>
 
-            </div>
-
-          </div>
+</div>
 
           {/* TOP */}
 
@@ -310,13 +393,11 @@ function SkillNode({
 
       <div className="flex flex-col items-center">
 
-        <div className="w-7 h-7 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(56,189,248,0.8)]" />
+        <div className="w-8 h-8 rounded-full bg-cyan-400 border border-cyan-200 shadow-[0_0_25px_rgba(56,189,248,0.9)] " />
 
-        <div className="mt-3 text-sm text-slate-300 font-medium">
-
-          {label}
-
-        </div>
+        <div className="mt-3 px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-700 text-sm font-medium backdrop-blur">
+  {label}
+</div>
 
       </div>
 
