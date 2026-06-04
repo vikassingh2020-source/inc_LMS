@@ -123,13 +123,7 @@ export default function Home() {
   ].map((skill) => (
     <div
       key={skill}
-      className="px-3 py-2rounded-lg
-        bg-slate-900/80
-        border border-slate-700
-        text-sm
-        text-slate-200
-        shadow-sm
-      ">
+      className="px-3 py-2rounded-lg bg-slate-900/80 border border-slate-700 text-sm text-slate-200 shadow-sm">
       {skill}
     </div>
   ))}
