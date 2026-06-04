@@ -96,14 +96,10 @@ export default function Home() {
           <h1 className="text-5xl lg:text-7xlfont-bold">
 
             MindOS
-
+            
           </h1>
 
-          <p className="text-lg lg:text-2xl">
-
-            The Operating System for Future-Ready Minds
-
-          </p>
+          
 
           <p className="text-lg text-slate-300 leading-relaxed max-w-xl">
 
@@ -117,42 +113,34 @@ export default function Home() {
 
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-3 max-w-xl">
-
-            {[
-              "Adaptability",
-              "System Thinking",
-              "Digital Intelligence",
-              "Communication",
-              "Scientific Thinking",
-              "Founder Mindset",
-              "Emotional Regulation",
-              "Creative Problem Solving",
-            ].map((skill) => (
-
-              <div
-                key={skill}
-                className="px-3 py-1.5lg:px-4 lg:py-2rounded-fullbg-slate-800border border-slate-700text-xs lg:text-sm"
-              >
-                {skill}
-              </div>
-
-            ))}
-
-          </div>
-
-<div className="lg:hidden flex justify-center my-8">
-
-  <div className="relative">
-
-    <div className="w-24 h-24 rounded-full bg-white text-black flex items-center justify-center font-bold text-xl animate-pulse shadow-[0_0_30px_rgba(56,189,248,0.7)]">
-
-      MindOS
-
+          <div className="mt-8 flex flex-wrap gap-2 max-w-xl">
+  {[
+    "Adaptability",
+    "System Thinking",
+    "Digital Intelligence",
+    "Scientific Thinking",
+    "+ More",
+  ].map((skill) => (
+    <div
+      key={skill}
+      className="px-3 py-2rounded-lg
+        bg-slate-900/80
+        border border-slate-700
+        text-sm
+        text-slate-200
+        shadow-sm
+      ">
+      {skill}
     </div>
+  ))}
+</div>
 
-  </div>
+<div className="lg:hidden flex items-center gap-3 my-6">
+  <div className="w-12 h-12 rounded-full bg-white shadow-[0_0_25px_rgba(56,189,248,0.8)] animate-pulse" />
 
+  <h2 className="text-3xl font-bold">
+    MindOS
+  </h2>
 </div>
 
           <button
