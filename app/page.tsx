@@ -93,13 +93,13 @@ export default function Home() {
 
         <div className="flex flex-col justify-center px-10 lg:px-20">
 
-          <h1 className="text-7xl font-bold mb-4">
+          <h1 className="text-5xllg:text-7xlfont-bold">
 
             MindOS
 
           </h1>
 
-          <p className="text-2xl text-cyan-400 mb-8">
+          <p className="text-lglg:text-2xl">
 
             The Operating System for Future-Ready Minds
 
@@ -132,7 +132,14 @@ export default function Home() {
 
               <div
                 key={skill}
-                className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-sm"
+                className="
+px-3 py-1.5
+lg:px-4 lg:py-2
+rounded-full
+bg-slate-800
+border border-slate-700
+text-xs lg:text-sm
+"
               >
                 {skill}
               </div>
@@ -140,6 +147,20 @@ export default function Home() {
             ))}
 
           </div>
+
+<div className="lg:hidden flex justify-center my-8">
+
+  <div className="relative">
+
+    <div className="w-24 h-24 rounded-full bg-white text-black flex items-center justify-center font-bold text-xl animate-pulse shadow-[0_0_30px_rgba(56,189,248,0.7)]">
+
+      MindOS
+
+    </div>
+
+  </div>
+
+</div>
 
           <button
             onClick={login}
@@ -152,7 +173,7 @@ export default function Home() {
 
         {/* RIGHT SIDE */}
 
-        <div className="relative flex items-center justify-center">
+       <div className="relative hidden lg:flex items-center justify-center">
 
           <svg
             width="700"
