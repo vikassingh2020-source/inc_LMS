@@ -53,6 +53,34 @@ export default function Home() {
             stroke-opacity: 0.2;
           }
         }
+           
+       @keyframes orbGlow {
+
+  0% {
+    transform: scale(1);
+    box-shadow:
+      0 0 30px rgba(56,189,248,0.5),
+      0 0 60px rgba(56,189,248,0.3);
+  }
+
+  50% {
+    transform: scale(1.04);
+    box-shadow:
+      0 0 50px rgba(56,189,248,0.9),
+      0 0 90px rgba(56,189,248,0.6);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 30px rgba(56,189,248,0.5),
+      0 0 60px rgba(56,189,248,0.3);
+  }
+}
+
+.animate-orbGlow {
+  animation: orbGlow 3s ease-in-out infinite;
+}
 
         @keyframes nodeFloat {
 
@@ -93,13 +121,15 @@ export default function Home() {
 
         <div className="flex flex-col justify-center px-10 lg:px-20">
 
-          <h1 className="text-5xl lg:text-7xlfont-bold">
+        <div className="flex items-center gap-4 mb-8">
 
-            MindOS
-            
-          </h1>
+  <div className="w-10 h-10 rounded-full bg-cyan-400 shadow-[0_0_25px_rgba(56,189,248,0.9)] animate-pulse lg:hidden" />
 
-          
+  <h1 className="text-5xl lg:text-7xl font-bold">
+    MindOS
+  </h1>
+
+</div>
 
           <p className="text-lg text-slate-300 leading-relaxed max-w-xl">
 
@@ -127,14 +157,6 @@ export default function Home() {
       {skill}
     </div>
   ))}
-</div>
-
-<div className="lg:hidden flex items-center gap-3 my-6">
-  <div className="w-12 h-12 rounded-full bg-white shadow-[0_0_25px_rgba(56,189,248,0.8)] animate-pulse" />
-
-  <h2 className="text-3xl font-bold">
-    MindOS
-  </h2>
 </div>
 
           <button
@@ -215,7 +237,7 @@ export default function Home() {
 
           <div className="absolute flex flex-col items-center">
 
-            <div className="w-40 h-40 rounded-full bg-white text-black flex items-center justify-center text-4xl font-bold animate-pulse shadow-[0_0_60px_rgba(56,189,248,0.7)]">
+            <div className="w-40 h-40 rounded-full bg-white text-black flex items-center justify-center text-4xl font-bold animate-orbGlow">
 
               MindOS
 
