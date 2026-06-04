@@ -1311,4 +1311,494 @@ export const lessons = [
     },
   },
 
+{
+    id: 19,
+
+    courseId: 7,
+
+    title: "Spot the Hijack",
+
+    videoId: "08DHhTMuyBk",
+
+    interactions: [
+      {
+        id: 1,
+        time: 88,
+        question: "________ often notices feeling first.",
+        options: ["Friend", "Phone", "Body"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 2,
+        time: 180,
+        question: "A fast heartbeat could mean you are:",
+        options: ["Excited", "Anxious", "Tired", "All of the above"],
+        correctAnswer: 3,
+      },
+
+      {
+        id: 3,
+        time: 335,
+        question: "Big feelings usually leave:",
+        options: ["Clues", "Reward", "Secret messages"],
+
+        correctAnswer: 0,
+      },
+
+      {
+        id: 4,
+        time: 481,
+        question: "Naming your feelings helps your brain:",
+        options: ["Ignore. them", "Understand them", "Forget them"],
+
+        correctAnswer: 1,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 633,
+
+      questions: [
+        {
+          question: "Before a big feeling appears, your body often:",
+          options: [
+            "Gives Clues",
+            "Goes to Sleep",
+            "Gets Smarter",
+          
+          ],
+          correctAnswer: 0,
+        },
+          {
+          question: "What is an emotional hijack?",
+          options: [
+            "A science experiment",
+            "Homework stress",
+            "When emotions take over your reaction", 
+          ],
+          correctAnswer: 2,
+        },
+        
+        {
+          question: "Which is a smart question to ask yourself?",
+          options: [
+            "What am I feeling?",
+            "Where do I feel it?",
+            "All of the above", 
+          ],
+          correctAnswer: 2,
+        },
+
+      ],
+    },
+  },
+
+{
+    id: 20,
+
+    courseId: 7,
+
+    title: "Reset your System",
+
+    videoId: "OCshTrkZx5Q",
+
+    interactions: [
+      {
+        id: 1,
+        time: 112,
+        question: "A phone at 1% battery is compared to:",
+        options: ["Old Phone", "Your brain and body during big feelings", "A new phone"],
+        correctAnswer: 1,
+      },
+
+      {
+        id: 2,
+        time: 169,
+        question: "When your system feels overloaded, what do you need first?",
+        options: ["A lecture", "More homework", "A Reset"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 3,
+        time: 360,
+        question: "Different feelings may need:",
+        options: ["Same Solution Always", "Different Solution", "Punishment"],
+
+        correctAnswer: 1,
+      },
+
+      {
+        id: 4,
+        time: 620,
+        question: "What is the smart rule from this module?",
+        options: ["Reset first, decide later", "Decide first, reset later", "React quickly"],
+
+        correctAnswer: 0,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 642,
+
+      questions: [
+        {
+          question: "Which is a reset tool mentioned in the module?",
+          options: [
+            "Slow breathing",
+            "Counting",
+            "Taking a quiet break",
+            "All of the above",
+          
+          ],
+          correctAnswer: 3,
+        },
+          {
+          question: "Looking around and naming 3 things you see helps you:",
+          options: [
+            "Forget everything",
+            "Get distracted",
+            "Focus on the present",
+          ],
+          correctAnswer: 2,
+        },
+        
+        {
+          question: "Does one reset tool work for everyone?",
+          options: [
+            "Yes",
+            "No",
+          ],
+          correctAnswer: 1,
+        },
+
+      ],
+    },
+  },
+
+  {
+    id: 21,
+
+    courseId: 7,
+
+    title: "Make Your Move",
+
+    videoId: "rmrRc0bTneo",
+
+    interactions: [
+      {
+        id: 1,
+        time: 109,
+        question: "Big feelings often create:",
+        options: ["More sleep", "Big Urges", "More Homework"],
+        correctAnswer: 1,
+      },
+
+      {
+        id: 2,
+        time: 200,
+        question: "Which is the smartest action?",
+        options: ["Throw a bottle", "Yell at a teammate", "Walk away and reset"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 3,
+        time: 314,
+        question: "“Repair is a move too” means:",
+        options: ["Mistakes can be fixed", "Mistakes never happen", "Feelings are wrong"],
+
+        correctAnswer: 0,
+      },
+
+      {
+        id: 4,
+        time: 387,
+        question: "What is a smart response?",
+        options: ["Quit immediately", "Argue", "Ask why and offer another idea"],
+
+        correctAnswer: 2,
+      },
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 650,
+
+      questions: [
+        {
+          question: "Actions are:",
+          options: [
+            "Choices we make",
+            "Emotions we feel",
+            "Accidents we can’t control",
+          
+          ],
+          correctAnswer: 0,
+        },
+          {
+          question: "The MAKE YOUR MOVE Tool asks:",
+          options: [
+            "What happens if I do this?",
+            "What move helps, not hurts?",
+            "Both A and B",
+            "None of the above",
+
+          ],
+          correctAnswer: 2,
+        },
+        
+        {
+          question: "Strong people:",
+          options: [
+            "Never gets upset",
+            "Avoid emotions",
+            "Win every argument",
+            "Choose actions wisely",
+          ],
+          correctAnswer: 3,
+        },
+
+      ],
+    },
+  },
+
+ {
+    id: 22,
+
+    courseId: 8,
+
+    title: "Who gets affected",
+
+    videoId: "8Ack1DjfFDA",
+
+    interactions: [
+      {
+        id: 1,
+        time: 92,
+        question: "One small choice can affect:",
+        options: ["No one", "Lots of people", "Only one person"],
+        correctAnswer: 1,
+      },
+
+      {
+        id: 2,
+        time: 216,
+        question: "Sending answers to a friend could affect:",
+        options: ["You", "Your friend", "The teacher", "All of the above"],
+        correctAnswer: 3,
+      },
+
+      {
+        id: 3,
+        time: 341,
+        question: "Who might be affected if you keep the extra money?",
+        options: ["All of them", "The cashier", "The Shop", "You"],
+
+        correctAnswer: 0,
+      },
+
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 640,
+
+      questions: [
+        {
+          question: "Ethical thinking means:",
+          options: [
+            "Thinking only about yourself",
+            "Avoiding choices",
+            "Seeing beyond yourself",
+          
+          ],
+          correctAnswer: 2,
+        },
+          {
+          question: "The Right Move Tool asks:",
+          options: [
+            "Who gets affected?",
+            "How are they affected?",
+            "Both",
+            "None of the above",
+
+          ],
+          correctAnswer: 2,
+        },
+        
+        {
+          question: "This module is mainly about:",
+          options: [
+            "Making quick choices",
+            "Thinking about who is affected by our choices",
+            "Win every argument",
+          ],
+          correctAnswer: 1,
+        },
+
+      ],
+    },
+  },
+ 
+  {
+    id: 23,
+
+    courseId: 8,
+
+    title: "What Happens Next?",
+
+    videoId: "K-byXtt4iww",
+
+    interactions: [
+      {
+        id: 1,
+        time: 196,
+        question: "One possible result of cheating is:",
+        options: ["Trust loss", "Fake confidence", "Unfair loss for others", "All of the above"],
+        correctAnswer: 3,
+      },
+
+      {
+        id: 2,
+        time: 344,
+        question: "If you accidentally break something and nobody sees, what should you think about?",
+        options: ["What happens next", "How to hide it", "How to blame someone else", "How to leave soon"],
+        correctAnswer: 0,
+      },
+
+      {
+        id: 3,
+        time: 444,
+        question: "When you hear gossip, a smart question is:",
+        options: ["How many people know?", "Can I tell everyone?", "What happens if I share it?"],
+
+        correctAnswer: 2,
+      },
+
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 625,
+
+      questions: [
+        {
+          question: "Future-thinking means:",
+          options: [
+            "Looking beyond the first result",
+            "Thinking only about now",
+            "Ignoring consequences",
+          
+          ],
+          correctAnswer: 0,
+        },
+          {
+          question: "The Right Move Tool asks:",
+          options: [
+            "What happens next?",
+            "Then what?",
+            "Who else gets pulled in?",
+            "All of the above",
+
+          ],
+          correctAnswer: 3,
+        },
+        
+        {
+          question: "If you accidentally damage a friend's item, the smartest action is:",
+          options: [
+            "Hide it",
+            "Tell the truth and help fix it",
+            "Walk away quietly",
+          ],
+          correctAnswer: 1,
+        },
+
+      ],
+    },
+  },
+
+{
+    id: 24,
+
+    courseId: 8,
+
+    title: "Who are you When its hard?",
+
+    videoId: "YPqJruGudGg", 
+
+    interactions: [
+      {
+        id: 1,
+        time: 191,
+        question: "friend says, “Just send the answers. Everyone does it,” what is creating pressure?",
+        options: ["Friendships", "Approval", "Group influence", "All of the above"],
+        correctAnswer: 3,
+      },
+
+      {
+        id: 2,
+        time: 326,
+        question: "What is one possible right move?",
+        options: ["Join in", "Stay silent", "Speak up or check privately", "Laugh about it"],
+        correctAnswer: 2,
+      },
+
+      {
+        id: 3,
+        time: 476,
+        question: "Character is shown most clearly when:",
+        options: ["Everything is easy", "There is pressure", "School is closed"],
+
+        correctAnswer: 1,
+      },
+
+   
+    ],
+
+    finalQuizQuestions: {
+      time: 644,
+
+      questions: [
+        {
+          question: "Future-me means:",
+          options: [
+            "The person you will become later",
+            "Your best friend",
+            "A superhero",
+          
+          ],
+          correctAnswer: 0,
+        },
+          {
+          question: "The Right Move Tool asks:",
+          options: [
+            "What kind of person do I want to be?",
+            "Will future-me respect this choice?",
+            "Both",
+            "Neither",
+
+          ],
+          correctAnswer: 2,
+        },
+        
+        {
+          question: "Doing the right thing may sometimes cost:",
+          options: [
+            "Comfort",
+            "Popularity",
+            "Convenience",
+            "All of the above",
+          ],
+          correctAnswer: 3,
+        },
+
+      ],
+    },
+  },
+
 ]

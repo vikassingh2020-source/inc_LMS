@@ -29,37 +29,279 @@ export default function Home() {
 
     } catch (error) {
 
-      console.error(
-        "Login Error:",
-        error
-      )
+      console.error(error)
     }
   }
 
   return (
 
-    <main className="min-h-screen flex items-center justify-center bg-gray-100">
+    <main className="min-h-screen bg-gradient-to-br from-black via-slate-950 to-black text-white overflow-hidden">
 
-      <div className="bg-white p-10 rounded-2xl shadow-xl text-center w-full max-w-md">
+      <style jsx global>{`
 
-        <h1 className="text-4xl font-bold mb-4">
-          Interactive LMS
-        </h1>
+        @keyframes glowPulse {
 
-        <p className="text-gray-600 mb-8">
-          Learn interactively through videos,
-          quizzes and real-world thinking.
-        </p>
+          0% {
+            stroke-opacity: 0.2;
+          }
 
-        <button
-          onClick={login}
-          className="w-full bg-black text-white py-3 rounded-xl"
-        >
-          Login with Google
-        </button>
+          50% {
+            stroke-opacity: 1;
+          }
+
+          100% {
+            stroke-opacity: 0.2;
+          }
+        }
+
+        @keyframes nodeFloat {
+
+          0% {
+            transform: translateY(0px);
+          }
+
+          50% {
+            transform: translateY(-8px);
+          }
+
+          100% {
+            transform: translateY(0px);
+          }
+        }
+
+        .glow-line {
+
+          stroke: #38bdf8;
+
+          stroke-width: 3;
+
+          animation:
+            glowPulse 3s infinite;
+        }
+
+        .floating-node {
+
+          animation:
+            nodeFloat 4s ease-in-out infinite;
+        }
+
+      `}</style>
+
+      <div className="grid lg:grid-cols-2 min-h-screen">
+
+        {/* LEFT SIDE */}
+
+        <div className="flex flex-col justify-center px-10 lg:px-20">
+
+          <h1 className="text-7xl font-bold mb-4">
+
+            MindOS
+
+          </h1>
+
+          <p className="text-2xl text-cyan-400 mb-8">
+
+            The Operating System for Future-Ready Minds
+
+          </p>
+
+          <p className="text-lg text-slate-300 leading-relaxed max-w-xl">
+
+            An interactive learning platform designed
+            to develop future-ready thinking skills.
+
+            Students learn to adapt, solve problems,
+            think critically, communicate clearly,
+            and make better decisions through engaging
+            video-based experiences.
+
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-3 max-w-xl">
+
+            {[
+              "Adaptability",
+              "System Thinking",
+              "Digital Intelligence",
+              "Communication",
+              "Scientific Thinking",
+              "Founder Mindset",
+              "Emotional Regulation",
+              "Creative Problem Solving",
+            ].map((skill) => (
+
+              <div
+                key={skill}
+                className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-sm"
+              >
+                {skill}
+              </div>
+
+            ))}
+
+          </div>
+
+          <button
+            onClick={login}
+            className="mt-10 bg-white text-black px-8 py-4 rounded-xl font-semibold w-fit hover:scale-105 transition"
+          >
+            Login with Google
+          </button>
+
+        </div>
+
+        {/* RIGHT SIDE */}
+
+        <div className="relative flex items-center justify-center">
+
+          <svg
+            width="700"
+            height="700"
+            viewBox="0 0 700 700"
+            className="absolute"
+          >
+
+            <line
+              className="glow-line"
+              x1="350"
+              y1="350"
+              x2="350"
+              y2="140"
+            />
+
+            <line
+              className="glow-line"
+              x1="350"
+              y1="350"
+              x2="140"
+              y2="350"
+              style={{
+                animationDelay: "0.5s"
+              }}
+            />
+
+            <line
+              className="glow-line"
+              x1="350"
+              y1="350"
+              x2="560"
+              y2="350"
+              style={{
+                animationDelay: "1s"
+              }}
+            />
+
+            <line
+              className="glow-line"
+              x1="350"
+              y1="350"
+              x2="250"
+              y2="560"
+              style={{
+                animationDelay: "1.5s"
+              }}
+            />
+
+            <line
+              className="glow-line"
+              x1="350"
+              y1="350"
+              x2="450"
+              y2="560"
+              style={{
+                animationDelay: "2s"
+              }}
+            />
+
+          </svg>
+
+          {/* CENTER */}
+
+          <div className="absolute flex flex-col items-center">
+
+            <div className="w-40 h-40 rounded-full bg-white text-black flex items-center justify-center text-4xl font-bold animate-pulse shadow-[0_0_60px_rgba(56,189,248,0.7)]">
+
+              MindOS
+
+            </div>
+
+            <div className="mt-5 text-slate-400 text-center max-w-xs">
+
+              Upgrade How Students Think
+
+            </div>
+
+          </div>
+
+          {/* TOP */}
+
+          <SkillNode
+            label="Adaptability"
+            className="-translate-y-56"
+          />
+
+          {/* LEFT */}
+
+          <SkillNode
+            label="Communication"
+            className="-translate-x-60"
+          />
+
+          {/* RIGHT */}
+
+          <SkillNode
+            label="Problem Solving"
+            className="translate-x-60"
+          />
+
+          {/* BOTTOM LEFT */}
+
+          <SkillNode
+            label="Founder Mindset"
+            className="-translate-x-32 translate-y-60"
+          />
+
+          {/* BOTTOM RIGHT */}
+
+          <SkillNode
+            label="Scientific Thinking"
+            className="translate-x-32 translate-y-60"
+          />
+
+        </div>
 
       </div>
 
     </main>
+  )
+}
+
+function SkillNode({
+  label,
+  className,
+}: {
+  label: string
+  className: string
+}) {
+
+  return (
+
+    <div
+      className={`absolute floating-node ${className}`}
+    >
+
+      <div className="flex flex-col items-center">
+
+        <div className="w-7 h-7 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(56,189,248,0.8)]" />
+
+        <div className="mt-3 text-sm text-slate-300 font-medium">
+
+          {label}
+
+        </div>
+
+      </div>
+
+    </div>
   )
 }
