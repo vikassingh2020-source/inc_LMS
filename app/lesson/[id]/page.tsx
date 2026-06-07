@@ -212,49 +212,63 @@ currentTime >= lesson.finalQuizQuestions.time
 
     let totalScore =
       interactionScore + finalQuizScore
+  
+try {
 
-    try {
+  const currentUser =
+    auth.currentUser
 
-      const currentUser =
-        auth.currentUser
+  if (!currentUser) {
 
-      if (!currentUser) {
-        alert("User not logged in")
-        return
-      }
+    alert("User not logged in")
 
-      const progressRef = doc(
-        db,
-        "studentProgress",
-        `${currentUser.uid}_module_${lesson.id}`
-      )
+    return
+  }
 
-      await setDoc(progressRef, {
-        userId: currentUser.uid,
-        userName: currentUser.displayName,
-        userEmail: currentUser.email,
-        moduleId: lesson.id,
-        courseId: lesson.courseId,
-        moduleTitle: lesson.title,
-        score: totalScore,
-        completed: true,
-        completedAt: new Date(),
-      })
+  const progressRef = doc(
+    db,
+    "studentProgress",
+    `${currentUser.uid}_module_${lesson.id}`
+  )
 
-    } catch (error) {
-      console.error(error)
-      return
-    }
+  console.log("Attempting save...")
 
-    setShowFinalQuiz(false)
+  await setDoc(progressRef, {
+    userId: currentUser.uid,
+    userName: currentUser.displayName,
+    userEmail: currentUser.email,
+    moduleId: lesson.id,
+    courseId: lesson.courseId,
+    moduleTitle: lesson.title,
+    score: totalScore,
+    completed: true,
+    completedAt: new Date(),
+  })
 
-    setModuleCompleted(true)
+  console.log("Save successful")
 
-    alert(
-      `Module Completed! Score: ${totalScore}`
-    )
+} catch (error) {
+
+  console.error(
+    "Firestore Save Error:",
+    error
+  )
+
+  alert(
+    "Firestore Save Error. Check console."
+  )
+
+  return
 }
 
+setShowFinalQuiz(false)
+
+setModuleCompleted(true)
+
+alert(
+  `Module Completed! Score: ${totalScore}`
+)
+  }
   return (
 
     <main className="min-h-screen bg-black flex items-center justify-center p-4">
@@ -367,4 +381,4 @@ currentTime >= lesson.finalQuizQuestions.time
 
     </main>
   )
-}
+  }
