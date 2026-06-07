@@ -334,6 +334,10 @@ export default function Home() {
 
 </div>
 
+<div className="fixed bottom-4 left-0 right-0 text-center text-xs text-slate-500">
+  MindOS ® - Designed by Dr. Vikas Singh
+</div>
+
           {/* TOP */}
 
           <SkillNode

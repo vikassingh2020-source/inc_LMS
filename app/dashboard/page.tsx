@@ -170,6 +170,10 @@ export default function Dashboard() {
 
               </p>
 
+              <div className="text-center text-xs text-slate-500 tracking-wider">
+  MindOS ® - Designed by Dr. Vikas Singh
+</div>
+
             </div>
 
             <button
