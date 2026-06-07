@@ -149,23 +149,23 @@ export const courses = [
     id: 7,
 
     title:
-      "Emotional Regulation",
+      "Feel It Lab",
 
     modules: [
       {
         id: 19,
-        title: "Self Awareness",
+        title: "Spot the Hijack",
       },
 
       {
         id: 20,
-        title: "Managing Stress",
+        title: "Reset your System",
       },
 
       {
         id: 21,
         title:
-          "Emotional Control",
+          "Make your Move",
       },
     ],
   },
@@ -174,24 +174,24 @@ export const courses = [
     id: 8,
 
     title:
-      "Ethical Reasoning",
+      "Right Move Lab",
 
     modules: [
       {
         id: 22,
-        title: "Right vs Wrong",
+        title: "Who gets Affected?",
       },
 
       {
         id: 23,
         title:
-          "Decision Ethics",
+          "What happens Next?",
       },
 
       {
         id: 24,
         title:
-          "Social Responsibility",
+          "Who are you when its Hard?",
       },
     ],
   },
